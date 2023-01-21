@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>a</title>
+  <style>
+   table {
+    width: 100%;
+    background: white; 
+    color: white;
+    border-spacing: 1px; 
+   }
+   td, th {
+    background: maroon; 
+    padding: 25px; 
+   }
+  </style>
+  <style>
+      .photo {
+       display: inline-block; /* Строчно-блочный элемент */
+       position: relative; /* Относительное позиционирование */
+      }
+      .photo:hover::after {
+       content: attr(data-title); /* Выводим текст */
+       position: absolute; /* Абсолютное позиционирование */
+       left: 0; right: 0; bottom: 5px; /* Положение подсказки */
+       z-index: 1; /* Отображаем подсказку поверх других элементов */
+       background: rgba(0,42,167,0.6); /* Полупрозрачный цвет фона */
+       color: #fff; /* Цвет текста */
+       text-align: center; /* Выравнивание текста по центру */
+       font-family: Arial, sans-serif; /* Гарнитура шрифта */
+       font-size: 15px; /* Размер текста подсказки */
+       padding: 5px 10px; /* Поля */
+       border: 1px solid #333; /* Параметры рамки */
+      }
+  </style>
+  <style>
+    [data-tooltip] {
+    position: relative; /* Относительное позиционирование */ 
+    }
+    [data-tooltip]::after {
+    content: attr(data-tooltip); /* Выводим текст */
+    position: absolute; /* Абсолютное позиционирование */
+    width: 1550px; /* Ширина подсказки */
+    left: 0; top: 0; /* Положение подсказки */
+    background: #3989c9; /* Синий цвет фона */
+    color: #fff; /* Цвет текста */
+    padding: 0.5em; /* Поля вокруг текста */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Параметры тени */
+    pointer-events: none; /* Подсказка */
+    opacity: 0; /* Подсказка невидима */
+    transition: 1s; /* Время появления подсказки */
+    } 
+    [data-tooltip]:hover::after {
+    opacity: 1; /* Показываем подсказку */
+    top: 2em; /* Положение подсказки */
+    }
+  </style>
+ </head> 
+ <body>
+   <table>
+    <tr><th><a style="font-size: 28px; color:#fff" href="index.html">Геометрия</a></th><th style="font-size: 28px;"><u>Алгебра</u></th></tr>
+   </table>
+  <p>
+     <br> 
+     
+   </p>
+   <p style="font-size: 40px;">Решение квадратных уравнений.</p>
+   
+   <style type="text/css">
+   .space { 
+    padding: 20px; 
+    background: #a0db9c; 
+    border: 3px solid #508a4c; 
+   }
+  </style>
+   <div class="space">
+    <style>
+        #zatemnenie {
+          background: rgba(102, 102, 102, 0.5);
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          display: none;
+        }
+        #okno {
+          width: 1800px;
+          height: 800px;
+          text-align: center;
+          padding: 15px;
+          border: 3px solid #0000cc;
+          border-radius: 10px;
+          color: #0000cc;
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          margin: auto;
+          background: #fff;
+        }
+        #zatemnenie:target {display: block;}
+        .close {
+          display: inline-block;
+          border: 1px solid #0000cc;
+          color: #0000cc;
+          padding: 0 12px;
+          margin: 10px;
+          text-decoration: none;
+          background: #f2f2f2;
+          font-size: 14pt;
+          cursor:pointer;
+        }
+        .close:hover {background: #e6e6ff;}
+    </style>
+     
+      <div id="zatemnenie">
+        <div style="text-align: justify; font-size: 25px;" id="okno">
+          <div class="photo" data-title="Сильвестр собственной персоной">
+          <img src="vfr/сил.png" width="150" height="180"></div>
+          <input id="n1" placeholder="Коэффициент при х^2"/>
+          <input id="n2" placeholder="Коэффициент при х"/>
+          <input id="n3" placeholder="Свободный член"/>
+
+          
+          <button onclick="func()">Посчитать</button>
+          <p id="result1"></p>
+          <p id="result2"></p>
+          <p id="d"></p>
+          <script>
+            var op; 
+            function func() {
+             var result1;
+             var result2;
+             var d;
+            var n1 = Number(document.getElementById("n1").value);
+            var n2 = Number(document.getElementById("n2").value);
+            var n3 = Number(document.getElementById("n3").value);
+              
+            d = n2*n2-4*n1*n3;    
+            result1 = (Math.sqrt(d)-n2)/(2*n1);
+                  
+                
+            result2 = (-n2-Math.sqrt(d))/(n1*2);
+                
+           // document.getElementById("d").innerHTML = d; //
+            document.getElementById("result1").innerHTML = result1;
+            document.getElementById("result2").innerHTML = result2;  
+            }
+          </script>
+          <p>Квадратное уравнение — это уравнение вида ax<sup>2</sup> + bx + c = 0. Где a - коэффициент перед x<sup>2</sup>, b коэффициент перед x и с свободный член.
+          <br>
+          <br>
+          Сушествует много способов решения, но самым универсальным и популярным был и остаётся дискриминант. D = b<sup>2</sup> − 4ac. Если дискриминант D меньше 0, то корней нет.
+          Если D = 0, то есть один корень, равный −b/2a.
+          Если D больше 0, то у уравнения две корня <img src="vfr/дисф.png" width="100" height="50">.
+          <br>
+          <br>
+          Джеймс Джо́зеф Сильве́стр (3 сентября 1814, Лондон, — 15 марта 1897, Оксфорд) — известный английский математик.
+          Известен своими работами в теории матриц, теории чисел и комбинаторике. Основатель Американского математического
+          журнала. Именно он ввёл термин "дискриминант". Так же крайне интересная работа:
+          <p data-tooltip="Последовательность Сильвестра — целочисленная последовательность[en], в которой каждый очередной 
+          член равен произведению предыдущих членов плюс единица. Первые несколько членов последовательности:
+          2, 3, 7, 43, 1807, 3 263 443, 10 650 056 950 807, 113 423 713 055 421 850 000 000 000, … .
+          Названа по имени Джеймса Сильвестра, который первым исследовал её в 1880 году. Значения её членов растут
+          как двойная экспонента, а сумма обратных членов образует ряд долей единицы, который сходится к 1 быстрее,
+          чем любой другой ряд дробей единицы с тем же числом членов. Рекуррентное соотношение, которое определяет 
+          члены последовательности, позволяет числам в последовательности быть разложенными на множители проще, нежели
+          другие числа того же порядка, но ввиду очень быстрого роста членов ряда полное разложение на простые множители
+          известно только для некоторых членов этой последовательности. Значения, полученные с использованием этой последовательности, 
+          используются для образования конечного представления 1 в виде египетской дроби, сасакианских многообразий Эйнштейна и
+          как источник данных для онлайновых алгоритмов.">
+          последовательность Сильвестора.</p> 
+          </p>
+          <a href="#" class="close">Назад</a>
+        </div>
+      </div>
+      <img src="vfr/дис.png" width="130" height="130">
+      <a style="font-size: 75px; color:#fff" href="#zatemnenie">Дискриминант.</a>
+   </div>
+   <br>
+
+
+
+   <style type="text/css">
+    .space { 
+     padding: 20px; 
+     background: #a0db9c; 
+     border: 3px solid #508a4c; 
+    }
+   </style>
+    <div class="space">
+     <style>
+         #wzatemnenie {
+           background: rgba(102, 102, 102, 0.5);
+           width: 100%;
+           height: 100%;
+           position: absolute;
+           top: 0;
+           left: 0;
+           display: none;
+         }
+         #wokno {
+           width: 1800px;
+           height: 800px;
+           text-align: center;
+           padding: 15px;
+           border: 3px solid #0000cc;
+           border-radius: 10px;
+           color: #0000cc;
+           position: absolute;
+           top: 0;
+           right: 0;
+           bottom: 0;
+           left: 0;
+           margin: auto;
+           background: #fff;
+         }
+         #wzatemnenie:target {display: block;}
+         .close {
+           display: inline-block;
+           border: 1px solid #0000cc;
+           color: #0000cc;
+           padding: 0 12px;
+           margin: 10px;
+           text-decoration: none;
+           background: #f2f2f2;
+           font-size: 14pt;
+           cursor:pointer;
+         }
+         .close:hover {background: #e6e6ff;}
+     </style>
+      
+       <div id="wzatemnenie">
+         <div style="text-align: justify; font-size: 25px;" id="wokno">
+          <div class="photo" data-title="Половинный Сильвестр">
+          <img src="vfr/сил.png" width="150" height="180"></div>
+           <input id="wn1" placeholder="Коэффициент при х^2"/>
+           <input id="wn2" placeholder="Коэфициент при х"/>
+           <input id="wn3" placeholder="Свободный член"/>
+ 
+           
+           <button onclick="wfunc()">Посчитать</button>
+           <p id="wresult1"></p>
+           <p id="wresult2"></p>
+           <p id="wd"></p>
+           <script>
+             var op; 
+             function wfunc() {
+              var wresult1;
+              var wresult2;
+              var wd;
+             var wn1 = Number(document.getElementById("wn1").value);
+             var wn2 = Number(document.getElementById("wn2").value);
+             var wn3 = Number(document.getElementById("wn3").value);
+               
+             wd = wn2*wn2-4*wn1*wn3;    
+             wresult1 = (Math.sqrt(wd)-wn2)/(2*wn1);
+                   
+                 
+             wresult2 = (-wn2-Math.sqrt(wd))/(wn1*2);
+                 
+            // document.getElementById("d").innerHTML = d; //
+             document.getElementById("wresult1").innerHTML = wresult1;
+             document.getElementById("wresult2").innerHTML = wresult2;  
+             }
+           </script>
+           <p>Половинный дискриминант - способ решения частного случая квадратного уравнения, где коэффициент при х чётный. D/4 = (b/2)<sup>2</sup>-ac.
+            <br>А корни находяться <img src="vfr/пдис1.png" width="110" height="50">.
+            <br>
+            <br>
+            Эта формула актуальна для больших чисел так как действий, а следовательно и операций с большими числами стало меньше.
+
+           </p>
+           <a href="#" class="close">Назад</a>
+         </div>
+       </div>
+       <img src="vfr/пдис.png" width="130" height="50">
+       <a style="font-size: 75px; color:#fff" href="#wzatemnenie">Половинный дискриминант.</a>
+    </div>
+    <br>
+
+
+
+
+  <style type="text/css">
+    .space { 
+     padding: 20px; 
+     background: #a0db9c; 
+     border: 3px solid #508a4c; 
+    }
+   </style>
+    <div class="space">
+     <style>
+         #qzatemnenie {
+           background: rgba(102, 102, 102, 0.5);
+           width: 100%;
+           height: 100%;
+           position: absolute;
+           top: 0;
+           left: 0;
+           display: none;
+         }
+         #qokno {
+           width: 1800px;
+           height: 800px;
+           text-align: center;
+           padding: 15px;
+           border: 3px solid #0000cc;
+           border-radius: 10px;
+           color: #0000cc;
+           position: absolute;
+           top: 0;
+           right: 0;
+           bottom: 0;
+           left: 0;
+           margin: auto;
+           background: #fff;
+         }
+         #qzatemnenie:target {display: block;}
+         .close {
+           display: inline-block;
+           border: 1px solid #0000cc;
+           color: #0000cc;
+           padding: 0 12px;
+           margin: 10px;
+           text-decoration: none;
+           background: #f2f2f2;
+           font-size: 14pt;
+           cursor:pointer;
+         }
+         .close:hover {background: #e6e6ff;}
+     </style>
+      
+       <div id="qzatemnenie">
+         <div style="text-align: justify; font-size: 25px;" id="qokno">
+          <div class="photo" data-title="Виет собственной персоной">
+           <img src="vfr/вие1.png" width="170" height="216"></div>
+           <input id="qn1" placeholder="p"/>
+           <input id="qn2" placeholder="q"/>
+           
+ 
+           
+           <button onclick="qfunc()">Посчитать</button>
+           <p id="qresult1"></p>
+           <p id="qresult2"></p>
+           <script>
+             var op; 
+             function qfunc() {
+              var result;
+             var qn1 = Number(document.getElementById("qn1").value);
+             var qn2 = Number(document.getElementById("qn2").value);          
+               
+                 
+             result1 = (-qn1+Math.sqrt(qn1*qn1-4*qn2))/2;
+                   
+                 
+             result2 = (-qn1-Math.sqrt(qn1*qn1-4*qn2))/2;
+                 
+               
+             document.getElementById("qresult1").innerHTML = result1;
+             document.getElementById("qresult2").innerHTML = result2;  
+             }
+           </script>
+           <p>Теорема Виета ещё один способ решения квадратных уравнений,
+           но она справедлива исключительно для приведённых квадратных уравнений, поэтому для решения уравнений сначало нужно эти уровнения привести к коэфициенту 1 перед x<sup>2</sup>.
+           <br>
+            Теорема гласит: если дано x<sup>2</sup> + px + q = 0, где x₁ и x₂ являются корнями, то справедливы два равенства: x₁ + x₂ = -p;    x₁ * x₂ = q
+            <br>
+            <br>
+            Франсуа Виет, сеньор де ля Биготьер ( 1540 — 23 февраля 1603) — французский математик, основоположник символической алгебры.
+            По образованию и основной профессии — юрист. Является создатилем теоремы, названной в его честь
+            <br>
+            К другим научным заслугам: Виет вывел новый тригонометрический метод решения неприводимого кубического уравнения. Виет применил его
+            для решения древней задачи трисекции угла, которую свёл к кубическому уравнению. Так же учёный описал первый пример бесконечного произведения, формула Виета для приближения числа π.
+           </p>
+           
+           <a href="#" class="close">Назад</a>
+         </div>
+       </div>
+       <img src="vfr/вие.png" width="130" height="45">
+       <a style="font-size: 75px; color:#fff" href="#qzatemnenie">Теорема Виета.</a>
+    </div>
+    <br>   
+  </body>
+</html>
