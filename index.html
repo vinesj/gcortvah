@@ -2,7 +2,7 @@
 <html>
  <head>
   <meta charset="utf-8">
-  <title>le</title>
+  <title>Геометрия</title>
   <style>
    table {
     width: 100%;
@@ -17,23 +17,28 @@
   </style>
   <style>
       .photo {
-       display: inline-block; /* Строчно-блочный элемент */
-       position: relative; /* Относительное позиционирование */
+       display: inline-block; 
+       position: relative;
       }
       .photo:hover::after {
-       content: attr(data-title); /* Выводим текст */
-       position: absolute; /* Абсолютное позиционирование */
-       left: 0; right: 0; bottom: 5px; /* Положение подсказки */
-       z-index: 1; /* Отображаем подсказку поверх других элементов */
-       background: rgba(0,42,167,0.6); /* Полупрозрачный цвет фона */
-       color: #fff; /* Цвет текста */
-       text-align: center; /* Выравнивание текста по центру */
-       font-family: Arial, sans-serif; /* Гарнитура шрифта */
-       font-size: 15px; /* Размер текста подсказки */
-       padding: 5px 10px; /* Поля */
-       border: 1px solid #333; /* Параметры рамки */
+       content: attr(data-title); 
+       position: absolute;
+       left: 0; right: 0; bottom: 5px;
+       z-index: 1; 
+       background: rgba(0,42,167,0.6); 
+       color: #fff; 
+       text-align: center; 
+       font-family: Arial, sans-serif; 
+       font-size: 15px; 
+       padding: 5px 10px;
+       border: 1px solid #333; 
       }
   </style>
+    <style>
+      .cen {
+       text-align: center;
+      }
+     </style>
  </head> 
  <body>
   
@@ -45,13 +50,13 @@
      </br>
    </p>
   <style type="text/css">
-   .space { 
+   .sqpace { 
     padding: 20px; 
-    background: #a0db9c; 
-    border: 3px solid #508a4c; 
+    background: #dfdd53; 
+    border: 3px solid #c2c45f; 
    }
   </style>
-   <div class="space">
+   <div class="sqpace">
     <style>
         #zatemnenie {
           background: rgba(102, 102, 102, 0.5);
@@ -156,7 +161,7 @@
      border: 3px solid #508a4c; 
     }
    </style>
-  <div class="space">
+  <div class="space"> 
      <style>
          #qzatemnenie {
            background: rgba(102, 102, 102, 0.5);
@@ -240,13 +245,7 @@
 
 
 
-  <style type="text/css">
-    .space { 
-     padding: 20px; 
-     background: #a0db9c; 
-     border: 3px solid #508a4c; 
-    }
-   </style>
+
   <div class="space">
      <style>
          #wzatemnenie {
@@ -330,13 +329,6 @@
 
 
 
-  <style type="text/css">
-    .space { 
-     padding: 20px; 
-     background: #a0db9c; 
-     border: 3px solid #508a4c; 
-    }
-   </style>
   <div class="space">
      <style>
          #ezatemnenie {
@@ -420,13 +412,6 @@
 
 
 
-  <style type="text/css">
-    .space { 
-     padding: 20px; 
-     background: #a0db9c; 
-     border: 3px solid #508a4c; 
-    }
-   </style>
   <div class="space">
      <style>
          #uzatemnenie {
@@ -519,13 +504,6 @@
   
   
 
-  <style type="text/css">
-    .space { 
-     padding: 20px; 
-     background: #a0db9c; 
-     border: 3px solid #508a4c; 
-    }
-   </style>
   <div class="space">
      <style>
            #rzatemnenie {
@@ -606,13 +584,7 @@
 
 
 
-  <style type="text/css">
-    .space { 
-     padding: 20px; 
-     background: #a0db9c; 
-     border: 3px solid #508a4c; 
-    }
-   </style>
+
   <div class="space">
      <style>
           #tzatemnenie {
@@ -697,13 +669,7 @@
 
 
 
-  <style type="text/css">
-    .space { 
-     padding: 20px; 
-     background: #a0db9c; 
-     border: 3px solid #508a4c; 
-    }
-   </style>
+
   <div class="space">
      <style>
          #yzatemnenie {
@@ -769,24 +735,24 @@
            </script>
             <style>
               [data-tooltip] {
-               position: relative; /* Относительное позиционирование */ 
-              }
+               position: relative;} 
+              
               [data-tooltip]::after {
-               content: attr(data-tooltip); /* Выводим текст */
-               position: absolute; /* Абсолютное позиционирование */
-               width: 650px; /* Ширина подсказки */
-               left: 0; top: 0; /* Положение подсказки */
-               background: #3989c9; /* Синий цвет фона */
-               color: #fff; /* Цвет текста */
-               padding: 0.5em; /* Поля вокруг текста */
-               box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Параметры тени */
-               pointer-events: none; /* Подсказка */
-               opacity: 0; /* Подсказка невидима */
-               transition: 1s; /* Время появления подсказки */
+               content: attr(data-tooltip); 
+               position: absolute; 
+               width: 1550px; 
+               left: 0; top: 0; 
+               background: #3989c9; 
+               color: #fff; 
+               padding: 0.5em; 
+               box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); 
+               pointer-events: none; 
+               opacity: 0;
+               transition: 1s; 
               } 
               [data-tooltip]:hover::after {
-               opacity: 1; /* Показываем подсказку */
-               top: 2em; /* Положение подсказки */
+               opacity: 1; 
+               top: 2em; 
               }
             </style>
            <p>Круг — часть плоскости, которая лежит внутри окружности.
@@ -817,6 +783,516 @@
        <a style="font-size: 75px; color: white;" href="#yzatemnenie" >Круга.
        </a>
   </div> 
+  
+
+
+  <p style="font-size: 40px;">Тригонометрия.</p>
+  <style type="text/css">
+    .ispace { 
+     padding: 20px; 
+     background: #44b2e6; 
+     border: 3px solid #44b2e6; 
+    }
+   </style>
+    <div class="ispace">
+     <style>
+         #izatemnenie {
+           background: rgba(102, 102, 102, 0.5);
+           width: 100%;
+           height: 100%;
+           position: absolute;
+           top: 0;
+           left: 0;
+           display: none;
+         }
+         #iokno {
+           width: 1800px;
+           height: 800px;
+           text-align: center;
+           padding: 15px;
+           border: 3px solid #0000cc;
+           border-radius: 10px;
+           color: #0000cc;
+           position: absolute;
+           top: 0;
+           right: 0;
+           bottom: 0;
+           left: 0;
+           margin: auto;
+           background: #fff;
+         }
+         #izatemnenie:target {display: block;}
+         .close {
+           display: inline-block;
+           border: 1px solid #0000cc;
+           color: #0000cc;
+           padding: 0 12px;
+           margin: 10px;
+           text-decoration: none;
+           background: #f2f2f2;
+           font-size: 14pt;
+           cursor:pointer;
+         }
+         .close:hover {background: #e6e6ff;}
+     </style>
+       <style>
+         .ce {
+           text-align: center; 
+         }
+         </style>
+      
+       <div id="izatemnenie">
+         <div style="text-align: justify; font-size: 25px;" id="iokno">
+           <div class="photo" data-title="Sin, cos, tg, ctg">
+           <img src="vfr/син1.png" width="250" height="180" alt=""></div>
+           <input id="inum1" placeholder=""/>
+           <input id="inum2" placeholder=""/>
+           <div id="ioperator_btns">
+             
+             <button id="qgip" onclick="op='q+'">найти sin</button>
+             <button id="qkat" onclick="op='e-'">найти cos</button>
+             <button id="wgip" onclick="op='w+'">найти tg</button>
+             <button id="ekat" onclick="op='q-'">найти ctg</button>
+           </div>
+           
+           <button onclick="ifunc()">Посчитать</button>
+           <p id="iresult"></p>
+           <script>
+             var op; 
+             function ifunc() {
+               var iresult;
+               var inum1 = Number(document.getElementById("inum1").value);
+               var inum2 = Number(document.getElementById("inum2").value);
+               iresult = inum1/inum2;
+               document.getElementById("iresult").innerHTML = iresult;
+             }
+           </script>
+           <p>Тригонометрические функции — элементарные функции, которые исторически возникли при рассмотрении прямоугольных треугольников
+             и выражали зависимости длин сторон этих треугольников от острых углов при гипотенузе (или, что равнозначно, зависимость хорд и высот
+             от центрального угла дуги в круге). Эти функции нашли широкое применение в самых разных областях науки. По мере развития математики 
+             определение тригонометрических функций было расширено, в современном понимании их аргументом может быть произвольное вещественное или комплексное число.
+             <br>
+             К тригонометрическим функциям традиционно причисляют:
+            <br>
+            <br>
+            Синус острого угла прямоугольного треугольника равный отношению противолежащего катета к гипотенузе.
+            <br>
+            <br>
+            Косинус острого угла прямоугольного треугольника равный отношению прилежащего катета к гипотенузе. 
+            <br>
+            <br>
+            Тангенс острого угла прямоугольного треугольника равный отношению противолежащего катета к прилежащему.
+            <br>
+            <br>
+            Котангенс острого угла прямоугольного треугольника равный отношению прилежащего катета к противолежащему.
+           </p>
+           <a href="#" class="close">Назад.</a>
+         </div>
+       </div>
+       <img src="vfr/син.png" width="250" height="130">
+       <a style="font-size: 75px; color: white;" href="#izatemnenie" >Sin, cos, tg, ctg.
+       </a>
+   </div>
+   <br>
+
+
+
+    <div class="ispace">
+     <style>
+         #ozatemnenie {
+           background: rgba(102, 102, 102, 0.5);
+           width: 100%;
+           height: 100%;
+           position: absolute;
+           top: 0;
+           left: 0;
+           display: none;
+         }
+         #ookno {
+           width: 1800px;
+           height: 800px;
+           text-align: center;
+           padding: 15px;
+           border: 3px solid #0000cc;
+           border-radius: 10px;
+           color: #0000cc;
+           position: absolute;
+           top: 0;
+           right: 0;
+           bottom: 0;
+           left: 0;
+           margin: auto;
+           background: #fff;
+         }
+         #ozatemnenie:target {display: block;}
+         .close {
+           display: inline-block;
+           border: 1px solid #0000cc;
+           color: #0000cc;
+           padding: 0 12px;
+           margin: 10px;
+           text-decoration: none;
+           background: #f2f2f2;
+           font-size: 14pt;
+           cursor:pointer;
+         }
+         .close:hover {background: #e6e6ff;}
+     </style>
+       <style>
+         .ce {
+           text-align: center; 
+         }
+         </style>
+      
+       <div id="ozatemnenie">
+         <div style="text-align: justify; font-size: 25px;" id="ookno">
+           <div class="photo" data-title="Синус">
+           <img src="vfr/син4.png" width="215" height="180" alt=""></div>
+           <input id="onum1" placeholder="Гипотенуза или катет"/>
+           <div id="ooperator_btns">
+             
+             <button id="o1" onclick="op='o1'">через cos</button>
+             <button id="o2" onclick="op='o2'">через градусы</button>
+             <button id="o3" onclick="op='o3'">через радианы</button>
+           </div>
+           
+           <button onclick="ofunc()">Посчитать</button>
+           <p id="oresult"></p>
+           <script>
+             var op; 
+             function ofunc() {
+               var oresult;
+               var onum1 = Number(document.getElementById("onum1").value);
+
+              switch (op) {
+                case 'o1':
+                  oresult = Math.sqrt(1-onum1*onum1);
+                  break;
+                case 'o2':
+                  oresult = Math.sin(onum1*Math.PI/180);
+                  break;
+                case 'o3':
+                  oresult = Math.sin(onum1);
+                  break;
+              }
+               document.getElementById("oresult").innerHTML = oresult;
+             }
+           </script>
+            <p>Основным тригонометрическим тождеством в русскоязычных учебниках математики называют соотношение sin<sup>2</sup>α + cos<sup>2</sup>α = 1. 
+            <br>Из чего следует: sin<sup>2</sup>α = 1 - cos<sup>2</sup>α</p>          
+            <p data-tooltip="Радиан — угол, соответствующий дуге, длина которой равна её радиусу. Единица измерения плоских углов в Международной системе единиц.
+            Радианная мера — угловая мера, в которой за единицу принимается угол в 1 радиан. То есть, радианная мера любого угла — это отношение этого угла к радиану.
+            Из определения следует, что величина полного угла равна 2π радиан.
+            Определить радианную меру можно и так: радианная мера угла — отношение длины дуги окружности, находящейся между сторонами угла, к радиусу этой окружности,
+            когда центр окружности совпадает с вершиной угла. В геометрии для определения радианной меры угла используют единичную окружность с центром в вершине угла;
+           тогда радианная мера угла равна длине дуги единичной окружности между сторонами угла.
+            Поскольку длина дуги окружности пропорциональна её угловой мере и радиусу, длина дуги окружности радиуса R и угловой величины α, измеренной в радианах, равна α * R.
+            Так как величина угла, выраженная в радианах, равна отношению длины дуги окружности к длине её радиуса, угол в радианном измерении — величина безразмерная.">Так же синус можно найти через радианы.</p>
+           <p>А значит и через градусную меру угла для этого нужно перевести градусы в радианы: ° * π/180 = рад. Или обратиться к таблице в которой указанный относительно круглые значения синусов.          </p>
+           <p class="cen"><img src="vfr/син5.png" width="550" height="130"></p>
+           
+           <a href="#" class="close">Назад.</a>
+         </div>
+       </div>
+       <img src="vfr/син3.png" width="130" height="130">
+       <a style="font-size: 75px; color: white;" href="#ozatemnenie" >Синус.
+       </a>
+   </div>
+   <br>
+
+
+
+   <div class="ispace">
+    <style>
+        #pzatemnenie {
+          background: rgba(102, 102, 102, 0.5);
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          display: none;
+        }
+        #pokno {
+          width: 1800px;
+          height: 800px;
+          text-align: center;
+          padding: 15px;
+          border: 3px solid #0000cc;
+          border-radius: 10px;
+          color: #0000cc;
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          margin: auto;
+          background: #fff;
+        }
+        #pzatemnenie:target {display: block;}
+        .close {
+          display: inline-block;
+          border: 1px solid #0000cc;
+          color: #0000cc;
+          padding: 0 12px;
+          margin: 10px;
+          text-decoration: none;
+          background: #f2f2f2;
+          font-size: 14pt;
+          cursor:pointer;
+        }
+        .close:hover {background: #e6e6ff;}
+    </style>
+      <style>
+        .ce {
+          text-align: center; 
+        }
+        </style>
+     
+      <div id="pzatemnenie">
+        <div style="text-align: justify; font-size: 25px;" id="pokno">
+          <div class="photo" data-title="Косинус">
+          <img src="vfr/син3.png" width="180" height="180" alt=""></div>
+          <input id="pnum1" placeholder="Гипотенуза или катет"/>
+          <div id="poperator_btns">
+            
+            <button id="p1" onclick="op='p1'">через sin</button>
+            <button id="p2" onclick="op='p2'">через градусы</button>
+            <button id="p3" onclick="op='p3'">через радианы</button>
+          </div>
+          
+          <button onclick="pfunc()">Посчитать</button>
+          <p id="presult"></p>
+          <script>
+            var op; 
+            function pfunc() {
+              var presult;
+              var pnum1 = Number(document.getElementById("pnum1").value);
+
+             switch (op) {
+               case 'p1':
+                 presult = Math.sqrt(1-pnum1*pnum1);
+                 break;
+               case 'p2':
+                 presult = Math.cos(pnum1*Math.PI/180);
+                 break;
+               case 'p3':
+                 presult = Math.cos(pnum1);
+                 break;
+             }
+              document.getElementById("presult").innerHTML = presult;
+            }
+          </script>
+          <p>Основным тригонометрическим тождеством в русскоязычных учебниках математики называют соотношение sin<sup>2</sup>α + cos<sup>2</sup>α = 1. 
+          <br>Из чего следует: cos<sup>2</sup>α = 1 - sin<sup>2</sup>α</p>          
+          <p data-tooltip="Радиан — угол, соответствующий дуге, длина которой равна её радиусу. Единица измерения плоских углов в Международной системе единиц.
+              Радианная мера — угловая мера, в которой за единицу принимается угол в 1 радиан. То есть, радианная мера любого угла — это отношение этого угла к радиану.
+              Из определения следует, что величина полного угла равна 2π радиан.
+              Определить радианную меру можно и так: радианная мера угла — отношение длины дуги окружности, находящейся между сторонами угла, к радиусу этой окружности,
+              когда центр окружности совпадает с вершиной угла. В геометрии для определения радианной меры угла используют единичную окружность с центром в вершине угла;
+             тогда радианная мера угла равна длине дуги единичной окружности между сторонами угла.
+              Поскольку длина дуги окружности пропорциональна её угловой мере и радиусу, длина дуги окружности радиуса R и угловой величины α, измеренной в радианах, равна α * R.
+              Так как величина угла, выраженная в радианах, равна отношению длины дуги окружности к длине её радиуса, угол в радианном измерении — величина безразмерная.">Так же синус можно найти через радианы.</p>
+          <p>А значит и через градусную меру угла для этого нужно перевести градусы в радианы: ° * π/180 = рад. Или обратиться к таблице в которой указанный относительно круглые значения синусов.          </p>
+          <p class="cen"><img src="vfr/кос5.png" width="550" height="130"></p>                   
+          <a href="#" class="close">Назад.</a>
+        </div>
+      </div>
+      <img src="vfr/син4.png" width="150" height="130">
+      <a style="font-size: 75px; color: white;" href="#pzatemnenie" >Косинус.
+      </a>
+  </div>
+  <br>
+
+
+
+  <div class="ispace">
+    <style>
+        #azatemnenie {
+          background: rgba(102, 102, 102, 0.5);
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          display: none;
+        }
+        #aokno {
+          width: 1800px;
+          height: 800px;
+          text-align: center;
+          padding: 15px;
+          border: 3px solid #0000cc;
+          border-radius: 10px;
+          color: #0000cc;
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          margin: auto;
+          background: #fff;
+        }
+        #azatemnenie:target {display: block;}
+        .close {
+          display: inline-block;
+          border: 1px solid #0000cc;
+          color: #0000cc;
+          padding: 0 12px;
+          margin: 10px;
+          text-decoration: none;
+          background: #f2f2f2;
+          font-size: 14pt;
+          cursor:pointer;
+        }
+        .close:hover {background: #e6e6ff;}
+    </style>
+      <style>
+        .ce {
+          text-align: center; 
+        }
+        </style>
+     
+      <div id="azatemnenie">
+        <div style="text-align: justify; font-size: 25px;" id="aokno">
+          <div class="photo" data-title="Тангенс угла наклона касательной">
+          <img src="vfr/тг1.png" width="230" height="180" alt=""></div>
+          <input id="anum1" placeholder="Гипотенуза или катет"/>
+          <div id="aoperator_btns">
+            
+            <button id="a1" onclick="op='a1'">через ctg</button>
+            <button id="a2" onclick="op='a2'">через градусы</button>
+            <button id="a3" onclick="op='a3'">через радианы</button>
+          </div>
+          
+          <button onclick="afunc()">Посчитать</button>
+          <p id="aresult"></p>
+          <script>
+            var op; 
+            function afunc() {
+              var aresult;
+              var anum1 = Number(document.getElementById("anum1").value);
+
+             switch (op) {
+               case 'a1':
+                 aresult = 1/anum1;
+                 break;
+               case 'a2':
+                 aresult = Math.tan(anum1*Math.PI/180);
+                 break;
+               case 'a3':
+                 aresult = Math.tan(anum1);
+                 break;
+             }
+              document.getElementById("aresult").innerHTML = aresult;
+            }
+          </script>
+          <p>Тангенс угла прямоугольного треугольника является противоположным к катангинсу того же угла следовательно: tg = 1/ctg </p>          
+          <p>Так же тангенс можно найти через радианы.</p>          
+          <p>А значит и через градусную меру угла для этого нужно перевести градусы в радианы: ° * π/180 = рад. Или обратиться к таблице в которой указанный относительно круглые значения синусов. </p>
+          <p class="cen"><img src="vfr/тг5.png" width="550" height="130"></p>         
+          <a href="#" class="close">Назад.</a>
+        </div>
+      </div>
+      <img src="vfr/тг2.png" width="150" height="130">
+      <a style="font-size: 75px; color: white;" href="#azatemnenie" >Тангенс.
+      </a>
+  </div>
+  <br>
+
+
+
+  <div class="ispace">
+    <style>
+        #szatemnenie {
+          background: rgba(102, 102, 102, 0.5);
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          display: none;
+        }
+        #sokno {
+          width: 1800px;
+          height: 800px;
+          text-align: center;
+          padding: 15px;
+          border: 3px solid #0000cc;
+          border-radius: 10px;
+          color: #0000cc;
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          margin: auto;
+          background: #fff;
+        }
+        #szatemnenie:target {display: block;}
+        .close {
+          display: inline-block;
+          border: 1px solid #0000cc;
+          color: #0000cc;
+          padding: 0 12px;
+          margin: 10px;
+          text-decoration: none;
+          background: #f2f2f2;
+          font-size: 14pt;
+          cursor:pointer;
+        }
+        .close:hover {background: #e6e6ff;}
+    </style>
+      <style>
+        .ce {
+          text-align: center; 
+        }
+        </style>
+     
+      <div id="szatemnenie">
+        <div style="text-align: justify; font-size: 25px;" id="sokno">
+          <div class="photo" data-title="Котангенс">
+          <img src="vfr/тг2.png" width="180" height="180" alt=""></div>
+          <input id="snum1" placeholder="Гипотенуза или катет"/>
+          <div id="soperator_btns">
+            
+            <button id="s1" onclick="op='s1'">через tg</button>
+            <button id="s2" onclick="op='s2'">через градусы</button>
+            <button id="s3" onclick="op='s3'">через радианы</button>
+          </div>
+          
+          <button onclick="sfunc()">Посчитать</button>
+          <p id="sresult"></p>
+          <script>
+            var op; 
+            function sfunc() {
+              var sresult;
+              var snum1 = Number(document.getElementById("snum1").value);
+
+             switch (op) {
+               case 's1':
+                 sresult = 1/snum1;
+                 break;
+               case 's2':
+                 sresult = 1/(Math.tan(snum1*Math.PI/180));
+                 break;
+               case 's3':
+                 sresult = 1/(Math.tan(snum1));
+                 break;
+             }
+              document.getElementById("sresult").innerHTML = sresult;
+            }
+          </script>
+          <p>Котангенс угла прямоугольного треугольника является противоположным к тангинсу того же угла следовательно: tg = 1/ctg </p>         
+          <p>Так же котангенс можно найти через радианы.</p>          
+          <p>А значит и через градусную меру угла для этого нужно перевести градусы в радианы: ° * π/180 = рад.</p>
+          <a href="#" class="close">Назад.</a>
+        </div>
+      </div>
+      <img src="vfr/тг1.png" width="150" height="130">
+      <a style="font-size: 75px; color: white;" href="#szatemnenie" >Котангенс.
+      </a>
+  </div>
   <br>
 </body>
 </html>

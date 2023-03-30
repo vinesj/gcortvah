@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>Гипербола</title>
+
+ </head>
+ <body>
+<canvas id="canvas2d" width=1800 height=900></canvas>
+<input id="a" placeholder="Коэффициент при х^2"/>
+<input id="b" placeholder="Коэффициент при х"/>
+<input id="ce" placeholder="Свободный член"/>
+<button>масштаб:</button>
+<button id="ms1" onclick="op='ms1'">1</button>
+<button id="ms2" onclick="op='ms2'">2</button>
+<button id="ms3" onclick="op='ms3'">3</button>
+<button id="ms4" onclick="op='ms4'">4</button>
+<button id="ms5" onclick="op='ms5'">5</button>
+
+
+<button onclick="func()">Построить</button>
+<button type="submit"  onClick="refreshPage()">Сбросить</button>
+<input type="button" onclick="history.back();" value="Назад"/>
+<script>
+  function refreshPage(){
+      window.location.reload();
+  } 
+  </script>
+
+<script>
+    var op; 
+
+   var result1;
+   var result2;
+   var a;
+
+  function func() {
+    
+    var a = Number(document.getElementById("a").value);
+  var b = Number(document.getElementById("b").value);
+  var ce = Number(document.getElementById("ce").value);
+
+
+let y = x => a*1/x+b*x+ce;
+switch (op) {
+case 'ms1':
+scale=10;
+break;
+case 'ms2':
+scale=25;
+break;
+case 'ms3':
+scale=30;
+break;
+case 'ms4':
+scale=50;
+break;
+case 'ms5':
+scale=64.3;
+break;
+}
+
+let step = 1;
+let cnvs = document.querySelector('canvas');
+let ctx = cnvs.getContext('2d');
+
+ctx.lineWidth = 0.5;
+
+for (var i = step*scale; i < cnvs.width; i += step*scale) { 
+  polyline('#7a7979', [[i, 0], [i, cnvs.height]]);
+}
+
+for (var i = step*scale; i < cnvs.height; i += step*scale) { 
+  polyline('#7a7979', [[0, i], [cnvs.width, i]]);
+}
+
+ctx.lineWidth = 2;
+let pts = [];
+for(let x = -cnvs.width/2; x<cnvs.width/2; x+=5) {
+    pts.push([cnvs.width/2+x, cnvs.height/2 - y(x/scale)*scale]);
+}
+polyline('blue', pts);
+
+polyline('red', [[0, cnvs.height /2 ], [cnvs.width, cnvs.height /2]]);
+
+polyline('green', [[cnvs.width / 2, 0], [cnvs.width / 2, cnvs.height]]);
+
+function polyline(color, pts) {
+  ctx.strokeStyle = color;
+  ctx.beginPath();
+  pts.forEach((p, i) => i ? ctx.lineTo(...p) : ctx.moveTo(...p));
+  ctx.stroke();
+}
+  }
+  
+</script>
+
+
+ </body>
+ </html>
