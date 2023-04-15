@@ -65,7 +65,7 @@
      <br> 
      
    </p>
-   <p style="font-size: 40px;">Решение квадратных уравнений.</p>
+   <p align="center" style="font-size: 40px;">Решение квадратных уравнений.</p>
    
    <style type="text/css">
     .sqpace { 
@@ -158,7 +158,7 @@
           Если D больше 0, то у уравнения две корня <img src="vfr/дисф.png" width="100" height="50">.
           <br>
           <br>
-          Джеймс Джо́зеф Сильвестр (1814 — 1897) — известный английский математик.
+          Джеймс Джозеф Сильвестр (1814 — 1897) — известный английский математик.
           Известен своими работами в теории матриц, теории чисел и комбинаторике. Основатель Американского математического
           журнала. Именно он ввёл термин "дискриминант". Так же крайне интересная работа:
           <p data-tooltip="Последовательность Сильвестра — целочисленная последовательность, в которой каждый очередной 
@@ -174,6 +174,13 @@
           как источник данных для онлайновых алгоритмов.">
           последовательность Сильвестора.</p> 
           </p>
+          <p>Половинный дискриминант - способ решения частного случая квадратного уравнения, где коэффициент при х чётный. D/4 = (b/2)<sup>2</sup>-ac.
+            <br>А корни находяться <img src="vfr/пдис1.png" width="110" height="50">.
+            <br>
+            <br>
+            Эта формула актуальна для больших чисел так как действий, а следовательно и операций с большими числами стало меньше.
+
+           </p>
           <a href="#" class="close">Назад</a>
         </div>
       </div>
@@ -185,7 +192,7 @@
 
 
 
-    <div class="sqpace">
+    <!-- <div class="sqpace">
      <style>
          #wzatemnenie {
            background: rgba(102, 102, 102, 0.5);
@@ -258,7 +265,7 @@
        <img src="vfr/пдис.png" width="130" height="50">
        <a style="font-size: 75px; color:#fff" href="#wzatemnenie">Половинный дискриминант.</a>
     </div>
-    <br>
+    <br> -->
 
 
 
@@ -344,7 +351,7 @@
 
 
   </p>
-  <p style="font-size: 40px;">График квадратичной функции.</p>
+  <p align="center" style="font-size: 40px;">График квадратичной функции.</p>
   <style>
     #ezatemnenie {
       background: rgba(102, 102, 102, 0.5);
@@ -549,7 +556,7 @@
         </div>
       </div>
       <img src="vfr/гип.png" width="130" height="80">
-      <a style="font-size: 75px; color:#fff" href="indexc.html">Построение графика синусойда.</a>
+      <a style="font-size: 75px; color:#fff" href="indexc.html">Построение графика тригонометрической формулы вида y = k*т.ф(e*x).</a>
    </div>
    <br>
 
@@ -584,7 +591,42 @@
         </div>
       </div>
       <img src="vfr/гип2.png" width="130" height="130">
-      <a style="font-size: 75px; color:#fff" href="indexd.html">Построение графика гиперболы.</a>
+      <a style="font-size: 75px; color:#fff" href="indexd.html">Построение графика гиперболы вида y = k/x.</a>
+   </div>
+   <br>
+
+   <div class="space">
+    <style>
+        #izatemnenie {
+          background: rgba(102, 102, 102, 0.5);
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          display: none;
+        }
+        #izatemnenie:target {display: block;}
+        .close {
+          display: inline-block;
+          border: 1px solid #0000cc;
+          color: #0000cc;
+          padding: 0 12px;
+          margin: 10px;
+          text-decoration: none;
+          background: #f2f2f2;
+          font-size: 14pt;
+          cursor:pointer;
+        }
+        .close:hover {background: #e6e6ff;}
+    </style>
+     
+      <div id="izatemnenie">
+        <div style="text-align: justify; font-size: 25px;" id="okno"> 
+        </div>
+      </div>
+      <img src="vfr/мод.png" width="130" height="130">
+      <a style="font-size: 75px; color:#fff" href="indexe.html">Построение графика модульного уравнения вида y = |kx+e|.</a>
    </div>
    <br>
   </body>

@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
  <head>
-  <title>Гипербола</title>
+  <title>Модуль</title>
 
  </head>
  <body>
 <canvas id="canvas2d" width=1800 height=900></canvas>
 <input id="a" placeholder="k"/>
+<input id="b" placeholder="e"/>
 
 <button>масштаб:</button>
 <button id="ms1" onclick="op='ms1'">1</button>
@@ -17,6 +18,7 @@
 
 
 <button onclick="func()">Построить</button>
+
 <button type="submit"  onClick="refreshPage()">Сбросить</button>
 <input type="button" onclick="history.back();" value="Назад"/>
 <script>
@@ -35,10 +37,11 @@
   function func() {
     
     var a = Number(document.getElementById("a").value);
- 
+  var b = Number(document.getElementById("b").value);
 
 
-let y = x => a/x;
+
+let y = x => Math.abs(a*x+b);
 switch (op) {
 case 'ms1':
 scale=10;
@@ -67,7 +70,7 @@ for (var i = step*scale; i < cnvs.width; i += step*scale) {
   polyline('#7a7979', [[i, 0], [i, cnvs.height]]);
 }
 
-for (var i = step*scale; i < cnvs.height; i += step*scale) { 
+for (var i = step*scale; i < cnvs.height; i += step*scale) {
   polyline('#7a7979', [[0, i], [cnvs.width, i]]);
 }
 
@@ -92,6 +95,12 @@ function polyline(color, pts) {
   
 </script>
 
+<script>
+  var op; 
 
+ var result1;
+ var result2;
+ var a;
+
+</script>
  </body>
- </html>

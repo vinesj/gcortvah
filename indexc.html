@@ -6,9 +6,8 @@
  </head>
  <body>
 <canvas id="canvas2d" width=1800 height=900></canvas>
-<input id="a" placeholder="Коэффициент при х под т.ф"/>
-<input id="b" placeholder="Коэффициент при х"/>
-<input id="ce" placeholder="Свободный член"/>
+<input id="a" placeholder="k"/>
+<input id="b" placeholder="e"/>
 <button>масштаб:</button>
 <button id="ms1" onclick="op='ms1'">1</button>
 <button id="ms2" onclick="op='ms2'">2</button>
@@ -40,10 +39,10 @@
     
     var a = Number(document.getElementById("a").value);
   var b = Number(document.getElementById("b").value);
-  var ce = Number(document.getElementById("ce").value);
 
 
-let y = x => a*Math.sin(x)+b*x+ce;
+
+let y = x => a*Math.sin(b*x);
 switch (op) {
 case 'ms1':
 scale=10;
@@ -109,10 +108,9 @@ function dfunc() {
   
   var a = Number(document.getElementById("a").value);
 var b = Number(document.getElementById("b").value);
-var ce = Number(document.getElementById("ce").value);
 
 
-let y = x => a*Math.cos(x)+b*x+ce;
+let y = x => a*Math.cos(b*x);
 switch (op) {
 case 'ms1':
 scale=10;
@@ -178,10 +176,9 @@ function d2func() {
   
   var a = Number(document.getElementById("a").value);
 var b = Number(document.getElementById("b").value);
-var ce = Number(document.getElementById("ce").value);
 
 
-let y = x => a*Math.tan(x)+b*x+ce;
+let y = x => a*Math.tan(b*x);
 switch (op) {
 case 'ms1':
 scale=10;
@@ -250,7 +247,7 @@ var b = Number(document.getElementById("b").value);
 var ce = Number(document.getElementById("ce").value);
 
 
-let y = x => a*(1/Math.tan(x))+b*x+ce;
+let y = x => a*(1/Math.tan(b*x));
 switch (op) {
 case 'ms1':
 scale=10;

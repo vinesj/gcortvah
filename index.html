@@ -153,7 +153,7 @@
 
 
 
-  <p style="font-size: 40px;">Площади:</p>
+  <p align="center" style="font-size: 40px;">Площади:</p>
   <style type="text/css">
     .space { 
      padding: 20px; 
@@ -502,6 +502,94 @@
   </div> 
   <br>
   
+
+
+  
+  <div class="space">
+    <style>
+        #uuzatemnenie {
+          background: rgba(102, 102, 102, 0.5);
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          display: none;
+        }
+        #uuokno {
+          width: 1800px;
+          height: 800px;
+          text-align: center;
+          padding: 15px;
+          border: 3px solid #0000cc;
+          border-radius: 10px;
+          color: #0000cc;
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          margin: auto;
+          background: #fff;
+        }
+        #uuzatemnenie:target {display: block;}
+        .close {
+          display: inline-block;
+          border: 1px solid #0000cc;
+          color: #0000cc;
+          padding: 0 12px;
+          margin: 10px;
+          text-decoration: none;
+          background: #f2f2f2;
+          font-size: 14pt;
+          cursor:pointer;
+        }
+        .close:hover {background: #e6e6ff;}
+    </style>
+    <style>
+        .ce {
+          text-align: center; 
+        }
+    </style>
+     
+    <div id="uuzatemnenie">
+        <div style="text-align: justify; font-size: 25px;" id="uuokno">
+          <div class="photo" data-title="Вписанная окружность">
+          <img src="vfr/впи1.png" width="280" height="180"></div>
+          <input id="uunum1" placeholder="Сторона"/>
+          <input id="uunum2" placeholder="Сторона"/>
+          <input id="uunum3" placeholder="Сторона"/>
+          <input id="uunum4" placeholder="Радиус вписанной окружности"/>       
+          <button onclick="uufunc()">Посчитать</button>
+          <p id="uuresult"></p>
+          <script>
+            var op; 
+            function uufunc() {
+              var uuresult;
+              var uperp;
+              var uunum1 = Number(document.getElementById("uunum1").value);
+              var uunum2 = Number(document.getElementById("uunum2").value);
+              var uunum3 = Number(document.getElementById("uunum3").value);
+              var uunum4 = Number(document.getElementById("uunum4").value);
+
+             uperp = (uunum1+uunum2+uunum3)/2;
+             uuresult =uunum4*uperp;                 
+             document.getElementById("uuresult").innerHTML = uuresult;
+            }
+          </script>
+          <p>Окружность называют вписанной в угол, если она лежит внутри угла и касается его сторон.
+            <br>
+            <br> В треугольник можно вписать лишь одну окружность и спомощью её 
+            радиуса можно найти площадь описанного треугольника по формуле S = p*r. Где p = (a+b+c)/2.</p>
+          <a href="#" class="close">Назад.</a>
+        </div>
+    </div>
+      <img src="vfr/впи.png" width="130" height="130">
+      <a style="font-size: 75px; color: white;" href="#uuzatemnenie" >Треугольника через радиус вписанной окружности.
+      </a>
+ </div> 
+ <br>
+
   
 
   <div class="space">
@@ -786,7 +874,7 @@
   
 
 
-  <p style="font-size: 40px;">Тригонометрия.</p>
+  <p align="center" style="font-size: 40px;">Тригонометрия:</p>
   <style type="text/css">
     .ispace { 
      padding: 20px; 
@@ -948,9 +1036,14 @@
          <div style="text-align: justify; font-size: 25px;" id="ookno">
            <div class="photo" data-title="Синус">
            <img src="vfr/син4.png" width="215" height="180" alt=""></div>
-           <input id="onum1" placeholder="Гипотенуза или катет"/>
+
+
            <div id="ooperator_btns">
-             
+            <input id="onum1" placeholder="не пи"/>
+            <button id="ppi1" onclick="op1='ppi1'">пи</button> 
+            /
+            <input id="onum2" placeholder="не пи"/>
+            <button id="ppi2" onclick="op1='ppi2'">пи</button>
              <button id="o1" onclick="op='o1'">через cos</button>
              <button id="o2" onclick="op='o2'">через градусы</button>
              <button id="o3" onclick="op='o3'">через радианы</button>
@@ -959,11 +1052,20 @@
            <button onclick="ofunc()">Посчитать</button>
            <p id="oresult"></p>
            <script>
-             var op; 
+             var op;
+             var op1; 
              function ofunc() {
                var oresult;
                var onum1 = Number(document.getElementById("onum1").value);
-
+               var onum2 = Number(document.getElementById("onum2").value);
+               switch (op1) {
+                case 'ppi1':
+                  onum1 = onum1*Math.PI
+                  break;
+                case 'ppi2':
+                  onum2 = onum2*Math.PI
+                 break;}
+              onum3 = onum1/onum2
               switch (op) {
                 case 'o1':
                   oresult = Math.sqrt(1-onum1*onum1);
@@ -972,7 +1074,7 @@
                   oresult = Math.sin(onum1*Math.PI/180);
                   break;
                 case 'o3':
-                  oresult = Math.sin(onum1);
+                  oresult = Math.sin(onum3);
                   break;
               }
                document.getElementById("oresult").innerHTML = oresult;
@@ -1053,9 +1155,12 @@
         <div style="text-align: justify; font-size: 25px;" id="pokno">
           <div class="photo" data-title="Косинус">
           <img src="vfr/син3.png" width="180" height="180" alt=""></div>
-          <input id="pnum1" placeholder="Гипотенуза или катет"/>
           <div id="poperator_btns">
-            
+            <input id="pnum1" placeholder="не пи"/>
+            <button id="ppq1" onclick="qp1='ppq1'">пи</button> 
+            /
+            <input id="pnum2" placeholder="не пи"/>
+            <button id="ppq2" onclick="qp1='ppq2'">пи</button>
             <button id="p1" onclick="op='p1'">через sin</button>
             <button id="p2" onclick="op='p2'">через градусы</button>
             <button id="p3" onclick="op='p3'">через радианы</button>
@@ -1065,10 +1170,19 @@
           <p id="presult"></p>
           <script>
             var op; 
+            var qp1;
             function pfunc() {
               var presult;
               var pnum1 = Number(document.getElementById("pnum1").value);
-
+              var pnum2 = Number(document.getElementById("pnum2").value);
+              switch (qp1) {
+                case 'ppq1':
+                  pnum1 = pnum1*Math.PI
+                  break;
+                case 'ppq2':
+                  pnum2 = pnum2*Math.PI
+                 break;}
+              pnum3 = pnum1/pnum2
              switch (op) {
                case 'p1':
                  presult = Math.sqrt(1-pnum1*pnum1);
@@ -1077,7 +1191,7 @@
                  presult = Math.cos(pnum1*Math.PI/180);
                  break;
                case 'p3':
-                 presult = Math.cos(pnum1);
+                 presult = Math.cos(pnum3);
                  break;
              }
               document.getElementById("presult").innerHTML = presult;
@@ -1157,9 +1271,12 @@
         <div style="text-align: justify; font-size: 25px;" id="aokno">
           <div class="photo" data-title="Тангенс угла наклона касательной">
           <img src="vfr/тг1.png" width="230" height="180" alt=""></div>
-          <input id="anum1" placeholder="Гипотенуза или катет"/>
           <div id="aoperator_btns">
-            
+            <input id="anum1" placeholder="не пи"/>
+            <button id="ppa1" onclick="ap1='ppa1'">пи</button> 
+            /
+            <input id="anum2" placeholder="не пи"/>
+            <button id="ppa2" onclick="ap1='ppa2'">пи</button>
             <button id="a1" onclick="op='a1'">через ctg</button>
             <button id="a2" onclick="op='a2'">через градусы</button>
             <button id="a3" onclick="op='a3'">через радианы</button>
@@ -1169,10 +1286,19 @@
           <p id="aresult"></p>
           <script>
             var op; 
+            var ap1;
             function afunc() {
               var aresult;
               var anum1 = Number(document.getElementById("anum1").value);
-
+              var anum2 = Number(document.getElementById("anum2").value);
+              switch (ap1) {
+                case 'ppa1':
+                  anum1 = anum1*Math.PI
+                  break;
+                case 'ppa2':
+                  anum2 = anum2*Math.PI
+                 break;}
+              anum3 = anum1/anum2
              switch (op) {
                case 'a1':
                  aresult = 1/anum1;
@@ -1181,7 +1307,7 @@
                  aresult = Math.tan(anum1*Math.PI/180);
                  break;
                case 'a3':
-                 aresult = Math.tan(anum1);
+                 aresult = Math.tan(anum3);
                  break;
              }
               document.getElementById("aresult").innerHTML = aresult;
@@ -1253,9 +1379,13 @@
         <div style="text-align: justify; font-size: 25px;" id="sokno">
           <div class="photo" data-title="Котангенс">
           <img src="vfr/тг2.png" width="180" height="180" alt=""></div>
-          <input id="snum1" placeholder="Гипотенуза или катет"/>
           <div id="soperator_btns">
-            
+            <input id="snum1" placeholder="не пи"/>
+            <button id="pps1" onclick="sp1='pps1'">пи</button> 
+            /
+            <input id="snum2" placeholder="не пи"/>
+            <button id="pps2" onclick="sp1='pps2'">пи</button>
+
             <button id="s1" onclick="op='s1'">через tg</button>
             <button id="s2" onclick="op='s2'">через градусы</button>
             <button id="s3" onclick="op='s3'">через радианы</button>
@@ -1265,10 +1395,19 @@
           <p id="sresult"></p>
           <script>
             var op; 
+            var sp1;
             function sfunc() {
               var sresult;
               var snum1 = Number(document.getElementById("snum1").value);
-
+              var snum2 = Number(document.getElementById("snum2").value);
+              switch (sp1) {
+                case 'pps1':
+                  snum1 = snum1*Math.PI
+                  break;
+                case 'pps2':
+                  snum2 = snum2*Math.PI
+                 break;}
+              snum3 = snum1/snum2
              switch (op) {
                case 's1':
                  sresult = 1/snum1;
@@ -1277,7 +1416,7 @@
                  sresult = 1/(Math.tan(snum1*Math.PI/180));
                  break;
                case 's3':
-                 sresult = 1/(Math.tan(snum1));
+                 sresult = 1/(Math.tan(snum3));
                  break;
              }
               document.getElementById("sresult").innerHTML = sresult;
